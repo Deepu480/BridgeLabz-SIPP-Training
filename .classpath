@@ -6,6 +6,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="EXTRAS_built_in_functions/" kind="src" path="src"/>
-	<classpathentry kind="src" path="src/EXTRAS_built_in_functions"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
