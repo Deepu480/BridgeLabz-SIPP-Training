@@ -3,15 +3,14 @@ package EXTRAS_built_in_functions;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class DateArithmetic {
+public class DateArithmeti {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter a date (yyyy-MM-dd): ");
-        String input = scanner.nextLine();
+        String input = sc.nextLine();
         LocalDate date = LocalDate.parse(input);
 
         LocalDate result = date.plusDays(7).plusMonths(1).plusYears(2).minusWeeks(3);
         System.out.println("Final Date after arithmetic operations: " + result);
     }
 }
-
