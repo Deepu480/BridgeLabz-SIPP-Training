@@ -1,5 +1,5 @@
 package OOPS.day2_access_modifiers;
-class Book {
+class BookLibrarySystem {
     public String ISBN;
     protected String title;
     private String author;
@@ -12,7 +12,7 @@ class Book {
         return author;
     }
 }
-class EBook extends Book {
+class EBook extends BookLibrarySystem {
     public void displayBookInfo() {
         System.out.println("ISBN: " + ISBN);
         System.out.println("Title: " + title);

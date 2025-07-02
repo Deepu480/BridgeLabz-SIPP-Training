@@ -1,5 +1,5 @@
 package OOPS.day2_access_modifiers;
-class Employee {
+class EmployeeRecords {
     public int employeeID;
     protected String department;
     private double salary;
@@ -14,7 +14,7 @@ class Employee {
         return salary;
     }
 }
-class Manager extends Employee {
+class Manager extends EmployeeRecords {
     public void displayManagerInfo() {
         System.out.println("Employee ID: " + employeeID);
         System.out.println("Department: " + department);

@@ -1,5 +1,6 @@
 package OOPS.day2_access_modifiers;
-class Student {
+
+class UniversityManagementSystem {
     public int rollNumber;
     protected String name;
     private double CGPA;
@@ -12,7 +13,7 @@ class Student {
         return CGPA;
     }
 }
-class PostgraduateStudent extends Student {
+class PostgraduateStudent extends UniversityManagementSystem {
     public void displayStudentInfo() {
         System.out.println("Roll Number: " + rollNumber);
         System.out.println("Name: " + name);
