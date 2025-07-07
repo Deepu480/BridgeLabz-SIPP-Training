@@ -56,7 +56,7 @@ public class CabInvoiceGenerator {
             type = sc.nextLine();
 
             if (type.equalsIgnoreCase("Normal") || type.equalsIgnoreCase("Premium")) {
-                break; // valid input
+                break; 
             } else {
                 System.out.println("Invalid input. Please enter 'Normal' or 'Premium'.");
             }
@@ -75,6 +75,7 @@ public class CabInvoiceGenerator {
 
             Ride ride = new Ride(dis, time);
             rideRepo.addRide(ride);
+            sc.close();
         }
 
         int totalFare = 0;
@@ -97,9 +98,24 @@ public class CabInvoiceGenerator {
         System.out.println("=====================================");
         System.out.println("|| USerID : "+user);
         System.out.println("|| Ride Type : " +type);
-        System.out.println("|| Total number of rides: " + n);
+        System.out.println(" Total number of rides: " + n);
         System.out.println("|| Total fare: " + totalFare);
         System.out.println("|| Average fare per ride: " + avgFare);
         System.out.println("=====================================");
-    }
+    }  
+//   sc.closed();
+    /*
+     * public class GfG{
+     * public static void main(String[] args){
+     * LinkedList<Integer> a1 = new LinkedList<>(){
+     * a1.add(10);
+     * a1.add(26);
+     * a1.add(30);
+     * a1.add(40)
+     * a1.add(50);
+     * System.out.println(a1);
+     * 
+     */
 }
+
+
