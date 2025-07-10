@@ -59,6 +59,7 @@ public class CabInvoiceGenerator {
             } else {
                 System.out.println("Invalid input. Please enter 'Normal' or 'Premium'.");
             }
+           
         }
 
         
@@ -74,6 +75,7 @@ public class CabInvoiceGenerator {
 
             Ride ride = new Ride(dis, time);
             rideRepo.addRide(ride);
+            sc.close();
         }
 
         int totalFare = 0;
@@ -89,6 +91,7 @@ public class CabInvoiceGenerator {
         } else {
             System.out.println("Invalid Ride Type Input");
             return; 
+           
         }
 
         double avgFare = (n > 0) ? (double) totalFare / n : 0;
@@ -100,5 +103,7 @@ public class CabInvoiceGenerator {
         System.out.println("|| Total fare: " + totalFare);
         System.out.println("|| Average fare per ride: " + avgFare);
         System.out.println("=====================================");
+        
     }
+   
 }
