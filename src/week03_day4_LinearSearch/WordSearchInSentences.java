@@ -1,4 +1,4 @@
-package week03_day4_LinearandBinarySearch;
+package week03_day4_LinearSearch;
 
 public class WordSearchInSentences {
     public static String searchWord(String[] sentences, String word) {

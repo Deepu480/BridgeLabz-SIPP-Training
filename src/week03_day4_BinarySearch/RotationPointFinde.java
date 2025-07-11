@@ -1,6 +1,6 @@
-package week03_day4_LinearandBinarySearch;
+package week03_day4_BinarySearch;
 
-public class RotationPointFinder {
+public class RotationPointFinde {
     public static int findRotationPoint(int[] arr) {
         int left = 0, right = arr.length - 1;
         while (left < right) {
@@ -19,4 +19,3 @@ public class RotationPointFinder {
         System.out.println("Rotation point index: " + findRotationPoint(arr));
     }
 }
-
