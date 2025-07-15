@@ -3,20 +3,16 @@ import java.util.*;
 
 public class SocialMediaNotificationFeed {
     static Scanner sc = new Scanner(System.in);
-
-    // Abstract Notification Class (Abstraction)
-    abstract static class Notification {
+ abstract static class Notification {
         protected String post;
 
         public Notification(String post) {
             this.post = post;
         }
 
-        public abstract String getFormattedMessage(); // Polymorphism
+        public abstract String getFormattedMessage(); 
     }
-
-    // Like Notification (Concrete subclass)
-    static class LikeNotification extends Notification {
+static class LikeNotification extends Notification {
         public LikeNotification(String post) {
             super(post);
         }
@@ -25,8 +21,6 @@ public class SocialMediaNotificationFeed {
             return "You liked the post: \"" + post + "\"";
         }
     }
-
-    // Comment Notification (Concrete subclass)
     static class CommentNotification extends Notification {
         private String comment;
 
@@ -39,8 +33,6 @@ public class SocialMediaNotificationFeed {
             return "You commented on \"" + post + "\": " + comment;
         }
     }
-
-    // Singly Linked List Node to hold posts
     static class PostNode {
         String post;
         PostNode next;
@@ -50,12 +42,8 @@ public class SocialMediaNotificationFeed {
             this.next = null;
         }
     }
-
-    // Feed Fields (Encapsulation)
     private PostNode head;
     private List<Notification> notifications = new ArrayList<>();
-
-    // Add new post
     public void addPost(String content) {
         PostNode newNode = new PostNode(content);
         if (head == null) {
@@ -67,8 +55,6 @@ public class SocialMediaNotificationFeed {
             temp.next = newNode;
         }
     }
-
-    // Display all posts in reverse order (most recent first)
     public void displayPosts() {
         if (head == null) {
             System.out.println("No posts yet.");
@@ -90,8 +76,6 @@ public class SocialMediaNotificationFeed {
             index--;
         }
     }
-
-    // Like a specific post
     public void likePost(int index) {
         String selected = getPostByIndex(index);
         if (selected != null) {
@@ -99,8 +83,6 @@ public class SocialMediaNotificationFeed {
             System.out.println("Post liked.");
         }
     }
-
-    // Comment on a specific post
     public void commentPost(int index, String comment) {
         String selected = getPostByIndex(index);
         if (selected != null) {
@@ -108,8 +90,6 @@ public class SocialMediaNotificationFeed {
             System.out.println("Comment added.");
         }
     }
-
-    // Helper to fetch post by reverse index
     private String getPostByIndex(int index) {
         List<String> posts = new ArrayList<>();
         PostNode temp = head;
@@ -119,14 +99,12 @@ public class SocialMediaNotificationFeed {
         }
 
         if (index >= 1 && index <= posts.size()) {
-            return posts.get(posts.size() - index); // reverse index mapping
+            return posts.get(posts.size() - index); 
         }
 
         System.out.println("Invalid post number.");
         return null;
     }
-
-    // Display all notifications
     public void displayNotifications() {
         if (notifications.isEmpty()) {
             System.out.println("No interactions yet.");
@@ -138,8 +116,6 @@ public class SocialMediaNotificationFeed {
             System.out.println(n.getFormattedMessage());
         }
     }
-
-    // Main menu
     public static void main(String[] args) {
         SocialMediaNotificationFeed feed = new SocialMediaNotificationFeed();
 
@@ -162,8 +138,6 @@ public class SocialMediaNotificationFeed {
 
             if (again.equalsIgnoreCase("N")) break;
         }
-
-        // Menu loop
         while (true) {
             System.out.println("\nMenu");
             System.out.println("1. View Posts");
