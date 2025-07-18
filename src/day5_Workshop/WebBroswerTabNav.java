@@ -90,7 +90,8 @@ public class WebBroswerTabNav {
                     return;
                 default:
                     System.out.println("Invalid option.");
-                    sc.close();
+                    sc.close();  // right the code in Scanner class in this closed the statement error are solve for this program  
+                    // in the formal base in this actual code run and implement is the code for without error and free access modifier
             }
         }
     }

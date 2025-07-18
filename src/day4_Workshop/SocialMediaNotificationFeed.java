@@ -177,7 +177,8 @@ static class LikeNotification extends Notification {
                     default:
                         System.out.println("Invalid choice.");
                 }
-            } catch (NumberFormatException e) {
+            } 
+            catch (NumberFormatException e) {
                 System.out.println("Please enter a valid numeric option.");
             }
         }
