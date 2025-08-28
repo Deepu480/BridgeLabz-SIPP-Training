@@ -1,4 +1,4 @@
-package week06_day06_PracticesRegex_and_JUnit;
+package week05_day06_PracticesRegex_and_JUnit;
 
 public class ReplaceSpaces {
     public static void main(String[] args) {

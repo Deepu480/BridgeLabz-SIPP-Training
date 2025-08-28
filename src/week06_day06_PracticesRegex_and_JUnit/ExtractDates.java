@@ -1,5 +1,0 @@
-package week06_day06_PracticesRegex_and_JUnit;
-
-public class ExtractDates {
-
-}
