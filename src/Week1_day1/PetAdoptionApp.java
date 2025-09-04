@@ -2,7 +2,7 @@ package Week1_day1;
 
 class Pet {
  String name;
- int age;
+ int age;3
  String breed;
  
  public Pet(String name, int age, String breed) {
